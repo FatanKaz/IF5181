@@ -105,10 +105,18 @@ def KodeBelok(code):
             continue
     return belok
 
+def wr(content):
+    with open('/Users/dhikanbiya/Dropbox/Kuliah/IF_semester_1/Pattern Recognation/IF5181/chaincode+kodebelok/kamus','w') as f:
+        f.write(str(content))
+
+def rd(content):
+    with open('/Users/dhikanbiya/Dropbox/Kuliah/IF_semester_1/Pattern Recognation/IF5181/chaincode+kodebelok/kamus','r') as f:
+        raw = f.read().split('\n')
+
 
 
 if __name__ == '__main__':
     cc = getChaincode()
     belok = KodeBelok(cc)
-    print 'Chaincode',cc
-    print 'Kode Belok ', belok
+    content = 'A\n'+str(cc)+'\n'+str(belok)
+    wr(content)
