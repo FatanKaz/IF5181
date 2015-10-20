@@ -3,7 +3,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 import copy
 
-img = misc.imread('img/I.jpg')
+img = misc.imread('img/0.jpg')
 #bw = np.zeros((img.shape[0],img.shape[1]))
 
 
@@ -18,7 +18,7 @@ b = (bw - (0,1)).tolist()
 firstpix = bw.tolist()
 
 alphanumeric = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M',
-'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z', '0', '1', '2',
+'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z', '0','1', '2',
 '3', '4', '5', '6', '7', '8', '9']
 
 
@@ -202,9 +202,11 @@ def classify(cc, dictionaryCC, belok, dictionaryKB):
 #     else: return listpixelindex, binary
 
 
-# def wr(content):
-#     with open('/Users/dhikanbiya/Dropbox/Kuliah/IF_semester_1/Pattern Recognation/IF5181/chaincode+kodebelok/kamus','a') as f:
-#         f.write(content)
+def wr(chaincode,kdbelok):
+    with open('chaincode_arial.txt','a') as f:
+        f.write(chaincode)
+    with open('kode_belok_arial.txt','a') as f:
+        f.write(kdbelok)
 #
 # def rd(content):
 #     with open('/Users/dhikanbiya/Dropbox/Kuliah/IF_semester_1/Pattern Recognation/IF5181/chaincode+kodebelok/kamus','r') as f:
@@ -223,5 +225,6 @@ if __name__ == '__main__':
     # print 'chaincode = ', cc
     # print 'kode belok = ', belok
 
-    #content = 'J\n'+str(cc)+'\n'+str(belok)+'\n'
-    #wr(content)
+    # chaincode = '||'+str(cc)
+    # kdbelok = '||'+str(belok)
+    # wr(chaincode,kdbelok)
