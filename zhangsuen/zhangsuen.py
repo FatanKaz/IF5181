@@ -4,7 +4,7 @@ import numpy as np
 import copy
 import matplotlib.pyplot as plt
 
-img = misc.imread('A_arial.jpg')
+img = misc.imread('M_arial.jpg')
 bw = np.zeros((img.shape[0], img.shape[1]))
 def getBW():
     for row in xrange(img.shape[0]):
@@ -138,14 +138,15 @@ def retrieve_data_training():
 
 def testing_data(training_int,u,s):
 
-    some = ''
+    some = 'tidak ketemu'
     ketemu = False
     i = 0
     while not ketemu:
-        if s == training_int[i][0] and u == training_int[i][1] :
+        if training_int[i][0] == s and training_int[i][1] == u:
             some = training_int[i][2]
+            # print training_int[i][0], training_int[i][1]
             ketemu = True
-
+        i += 1
     return some
 if __name__ == '__main__':
    getBW()
@@ -155,7 +156,7 @@ if __name__ == '__main__':
    u = ujung(tulang)
    training_data = retrieve_data_training()
 
-   print 'objek adalah : ',testing_data(training_data,u,s)
+   print 'objek adalah :',testing_data(training_data,u,s)
    # print 'jumlah simpang :',s
    # print 'jumlah ujung :',u
 
