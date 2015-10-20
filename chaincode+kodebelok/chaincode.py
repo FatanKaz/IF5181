@@ -3,7 +3,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 import copy
 
-img = misc.imread('img/0.jpg')
+img = misc.imread('../zhangsuen/D_arial.jpg')
 #bw = np.zeros((img.shape[0],img.shape[1]))
 
 
