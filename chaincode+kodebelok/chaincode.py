@@ -3,7 +3,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 import copy
 
-img = misc.imread('../zhangsuen/D_arial.jpg')
+img = misc.imread('img/0_arial.jpg')
 #bw = np.zeros((img.shape[0],img.shape[1]))
 
 
@@ -215,8 +215,8 @@ def wr(chaincode,kdbelok):
 
 
 if __name__ == '__main__':
-    f = open('chaincode_arial.txt', 'r')
-    g = open('kode_belok_arial.txt', 'r')
+    f = open('chaincode_arial_copy.txt', 'r')
+    g = open('kode_belok_arial_copy.txt', 'r')
     dictionaryCC = np.loadtxt(f, dtype = str, delimiter='||')
     dictionaryKB = np.loadtxt(g, dtype = str, delimiter='||')
     cc = getChaincode()
