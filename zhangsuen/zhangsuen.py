@@ -4,7 +4,7 @@ import numpy as np
 import copy
 import matplotlib.pyplot as plt
 
-img = misc.imread('M_arial.jpg')
+img = misc.imread('A_arial.jpg')
 bw = np.zeros((img.shape[0], img.shape[1]))
 def getBW():
     for row in xrange(img.shape[0]):
@@ -162,5 +162,5 @@ if __name__ == '__main__':
 
    # print tulang[103]
    # print len(tulang)
-   # plt.imshow(tulang, cmap = 'Greys')
-   # plt.show()
+   plt.imshow(tulang, cmap = 'Greys')
+   plt.show()
